@@ -54,4 +54,4 @@ for x in range(count,1,-1):
 
 
 
-print("Total scriptsa: " + str(count))
+print("Total scripts: " + str(count))

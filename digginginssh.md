@@ -55,7 +55,7 @@ Relevant Elasticsearch command is:
   ```
 
 
-
+```
 - root: 27627033
 - admin: 9552633
 - shell%00: 5920328
@@ -68,10 +68,11 @@ Relevant Elasticsearch command is:
 - user: 930137
 - support: 902638
 - 3E/usr/.misa%20%26%26%20cd%20/usr/: 886671
+```
 
 ### Top passwords including counter ###
 
-
+```
 - sh%00: 5749221
 - system%00: 5106154
 - admin: 2217009
@@ -82,14 +83,14 @@ Relevant Elasticsearch command is:
 - password: 1282365
 - 12345: 1279241
 - 123456: 1078316
-
+```
 
 The absolut number of unique username / password combinations is 167421.
 (see https://github.com/schmalle/digintossh/blob/master/tools/unpw.py)
 
 ### The most often seen username / password combination have been: ###
 
-
+```
 - 158721: {'username': 'system', 'password': 'shell'}
 - 141277: {'username': 'default', 'password': 'default'}
 - 138411: {'username': 'sh', 'password': '%3E/tmp/.ptmx%20%26%26%20cd%20/tmp/'}
@@ -111,7 +112,7 @@ The absolut number of unique username / password combinations is 167421.
 87541: {'username': '/bin/busybox%20rm%20-rf%20KOWAI-BAdAsV%20KOWAI-d', 'password': '/bin/busybox%20cp%20/bin/busybox%20KOWAI-BAdAsV%3B%20%3EKOWAI-BAdAsV%3B%20/bin/busybox%20chmod%20777%20KOWAI-BAdAsV%3B%20/bin/busybox%20KowaiSlump'}
 - 87247: {'username': 'vstarcam2015', 'password': '20150602'} (E.g. the username "vstarcam2015" belongs to a C7824WIP HD indoor IP Camera device, which password was e.g. discussed here: https://www.fontenay-ronan.fr/c7824wip-security-review/.)
 - 85005: {'username': 'admin', 'password': 'admin123'}
-
+```
 
 (see https://github.com/schmalle/digintossh/blob/master/tools/unpw2.py)
 
@@ -292,3 +293,28 @@ sh
 /bin/busybox cp /bin/busybox hu87vHVQpZ; >hu87vHVQpZ; /bin/busybox chmod 777 hu87vHVQpZ; /bin/busybox Kronos1
 /bin/busybox cat /bin/busybox || while read i; do echo $i; done < /bin/busybox
 ```
+
+
+## Analysing the IP source of the attacks ##
+
+In total we have seen 277592 unique IP addresses.
+
+The biggest sources of traffic have been:
+
+```
+209.141.57.185  Counter: 1457823 (e.g. listed here https://urlhaus.abuse.ch/host/209.141.57.185/)
+89.34.237.102   Counter: 996528 (e.g. listed here https://urlhaus.abuse.ch/host/89.34.237.102/, first seen here on 8th of December)
+185.246.154.186 Counter: 991312
+116.31.116.32   Counter: 798854
+116.31.116.37   Counter: 694223 (e.g. listed here https://www.abuseipdb.com/check/116.31.116.37)
+116.31.116.38   Counter: 586725
+116.31.116.39   Counter: 578093
+103.79.35.132   Counter: 561068
+46.17.47.82     Counter: 459072
+103.79.228.45   Counter: 450128
+185.244.25.194  Counter: 449017
+35.228.149.232  Counter: 430407
+```
+
+### Conclusion ###
+
