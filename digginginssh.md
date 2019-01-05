@@ -38,7 +38,7 @@ Initially , when looking at looking at the distribution of all requests, we see 
 
 ### Top usernames including counter (36700 individual usernames in total) ###
 
-Relevant Elasticsearch command is:
+Relevant Elasticsearch command is (using aggregations from Elasticsearch):
 
 
 ```GET http://localhost:9200/ssh/_search
@@ -302,19 +302,27 @@ In total we have seen 277592 unique IP addresses.
 The biggest sources of traffic have been:
 
 ```
-209.141.57.185  Counter: 1457823 (e.g. listed here https://urlhaus.abuse.ch/host/209.141.57.185/)
-89.34.237.102   Counter: 996528 (e.g. listed here https://urlhaus.abuse.ch/host/89.34.237.102/, first seen here on 8th of December)
-185.246.154.186 Counter: 991312
-116.31.116.32   Counter: 798854
-116.31.116.37   Counter: 694223 (e.g. listed here https://www.abuseipdb.com/check/116.31.116.37)
-116.31.116.38   Counter: 586725
-116.31.116.39   Counter: 578093
-103.79.35.132   Counter: 561068
-46.17.47.82     Counter: 459072
-103.79.228.45   Counter: 450128
-185.244.25.194  Counter: 449017
-35.228.149.232  Counter: 430407
+209.141.57.185  Country: US Counter: 1457823 (e.g. listed here https://urlhaus.abuse.ch/host/209.141.57.185/)
+89.34.237.102   Country: RO Counter: 996528 (e.g. listed here https://urlhaus.abuse.ch/host/89.34.237.102/, first seen here on 8th of December)
+185.246.154.186 Country: RU Counter: 991312
+116.31.116.32   Country: CN Counter: 798854
+116.31.116.37   Country: CN Counter: 694223 (e.g. listed here https://www.abuseipdb.com/check/116.31.116.37)
+116.31.116.38   Country: CN Counter: 586725
+116.31.116.39   Country: CN Counter: 578093
+103.79.35.132   Country: IN Counter: 561068
+46.17.47.82     Country: RU Counter: 459072
+103.79.228.45   Country: IN Counter: 450128
+185.244.25.194  Country: NL Counter: 449017
+35.228.149.232  Country: US Counter: 430407
 ```
 
+
+
+
 ### Conclusion ###
+
+
+SSH / telnet scanning is still a huge topic. Honeypots are still a good method to indentify 
+"mass spreading malware", which is not aggressivly scanning for emulated environments.
+
 
